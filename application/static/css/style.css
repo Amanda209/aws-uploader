@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    height: 70px;
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    height: 68px;
+    padding: 10px 20px;
+}
+
+.navbar-nav > li > a {
+    padding: 24px;
+}
+
+#main-section {
+    background: #F2F2F2;
+    min-height: 90vh;
+}
+
+#main-section .file-table {
+    width: 100%;
+}
+
+#main-section .file-table .file-row {
+    padding: 5px 10px;
+    border-bottom: 1px solid #AAA;
+}
+
+#footer {
+    background: #313233;
+    min-height: calc(10vh - 70px)
+}

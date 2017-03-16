@@ -1,0 +1,5 @@
+application/__pycache__
+application/routes/__pycache__
+*.pyc
+*.pyo
+.aws
