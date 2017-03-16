@@ -1,0 +1,39 @@
+{% include "_include/header.html" %}
+{% include "_include/navbar.html" %}
+
+    <section id="main-section">
+        <div class="container">
+
+            {% if files %}
+            <h1>Lista de Arquivos</h1>
+
+            <table class="file-table">
+                {% for file in files %}
+                <tr class="file-row">
+                    <td style="width: 15%" class="text-center"><span class="file-index">{{ loop.index }}</span></td>
+                    <td style="width: 45%"><span class="file-name">{{ file.name }}</span></td>
+                    <td style="width: 20%"><span class="file-name">{{ file.size }}</span></td>
+                    <td style="width: 20%">
+                        <a href="/download/{{ file.name }}" target="_blank" style="display: inline-block; margin: 10px 15px">
+                            <button class='btn btn-info'>Download!</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+
+            <div class="upload-box">
+                <form method='post' enctype='multipart/form-data'>
+                    <input type='file' name='file' class="btn">
+                    <input type='submit' value='Upload' class="btn">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+
+    </section>
+
+{% include "_include/footer.html" %}

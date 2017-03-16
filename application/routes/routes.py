@@ -10,6 +10,10 @@ def allowed_file(filename):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    return render_template('index.html')
+
+@app.route('/dashboard', methods=['GET', 'POST'])
+def dashboard():
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
@@ -30,12 +34,12 @@ def index():
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
-            return redirect(url_for('index', filename=filename))
+            return redirect(url_for('dashboard', filename=filename))
 
     base_dir = app.config['UPLOAD_FOLDER']
     files = ({'name': file, 'size': os.stat(os.path.join(base_dir,file))[6]} for file in os.listdir(base_dir))
 
-    return render_template('index.html', files=files)
+    return render_template('dashboard.html', files=files)
 
 @app.route('/download/<filename>', methods=['GET', 'POST'])
 def download_file(filename):

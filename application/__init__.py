@@ -11,4 +11,4 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
 
 # Routes definition
-import application.routes.index
+import application.routes.routes

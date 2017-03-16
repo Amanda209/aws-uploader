@@ -28,12 +28,19 @@ body {
 }
 
 #main-section .file-table {
+    border: 1px solid #DDD;
     width: 100%;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #main-section .file-table .file-row {
     padding: 5px 10px;
-    border-bottom: 1px solid #AAA;
+    border-bottom: 1px solid #E2E2E2;
+}
+
+#main-section .upload-box {
+    margin: 50px;
 }
 
 #footer {
